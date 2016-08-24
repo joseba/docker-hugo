@@ -14,8 +14,7 @@ RUN apk add --update python bash py-pip git wget ca-certificates && \
 RUN pip install Pygments
 
 RUN mkdir /themes && \
-  cd /themes && \
-  git clone --recursive https://github.com/spf13/hugoTheme
+  git clone --depth 1 --recursive https://github.com/spf13/hugoThemes.git /themes
 
 RUN hugo genautocomplete
 

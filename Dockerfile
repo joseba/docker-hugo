@@ -16,8 +16,6 @@ RUN pip install Pygments
 RUN mkdir /themes && \
   git clone --depth 1 --recursive https://github.com/spf13/hugoThemes.git /themes
 
-RUN hugo genautocomplete
-
 COPY ./run.sh /run.sh
 
 VOLUME /src

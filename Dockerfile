@@ -13,8 +13,7 @@ RUN apk add --update python bash py-pip git wget ca-certificates && \
 
 RUN pip install Pygments
 
-RUN mkdir /themes && \
-  git clone --depth 1 --recursive https://github.com/spf13/hugoThemes.git /themes
+RUN git clone https://github.com/Zenithar/hugo-theme-bleak.git /themes/default
 
 COPY ./run.sh /run.sh
 
